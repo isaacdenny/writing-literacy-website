@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,11 +8,16 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    /> </head>
+    />
+  </head>
   <body>
     <div class="nav-container">
       <nav>
-        <div id="site-title" class="site-title" onclick="window.location.href = '/'">
+        <div
+          id="site-title"
+          class="site-title"
+          onclick="window.location.href = '/'"
+        >
           Media Literacy Project
         </div>
         <ul id="nav-links" class="nav-links">
@@ -28,30 +33,185 @@
     </div>
     <div class="home-page">
       <div class="page-heading">
-        <h1>My writing can do math</h1>
-        <p>A form by Isaac Denny</p>
+        <h1>Do it yourself</h1>
+        <p>A story by Isaac Denny</p>
       </div>
-      <div class="form-container">
-        <form id="story-form" class="story-form">
-          <div class="form-field" width="500px">
-            <label for="full-name">Full Name</label>
-            <input name="full-name" type="text"  />
+      <div class="chat-container">
+        <div class="chat-messages">
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Hello, Tell me the story</div>
           </div>
-          <div class="form-field" width="500px">
-            <label for="profession">Profession</label>
-            <input name="profession" type="text"  />
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong>Ask ChatGPT</strong> for the best way to learn a skill. You
+            might receive suggestions like focused practice and active learning,
+            or perhaps repetition and consistency. What the AI helper does not
+            know is that it is inhibiting the learning ability of an entire
+            generation of programmers. Unfortunately, many LLM users outsource
+            their essay-writing, email-writing, programming, or even texting to
+            the virtual assistant without a second thought. Climbing out of the
+            addictive, vicious cycle that is asking ChatGPT for help with my
+            writing was my biggest challenge when learning to code in my first
+            year of college.
           </div>
-            <button type="button" id="next-btn">Next</button>
-            <button type="submit">Submit</button>
-        </form>
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Tell me more</div>
+          </div>
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong>I had no understanding of what I was writing.</strong> The
+            first semester of my freshman year mostly involved gawking at coding
+            challenges on LeetCode, trying my best to design algorithms to solve
+            them, and inevitably asking ChatGPT for help when I hit an obstacle.
+            Many nights I sat in my dark, honors dorm room at Boise State
+            University, Idaho and struggled with the difficult principles of
+            computer science. As far as I could tell, AI frequently was
+            answering my low-difficulty questions correctly; countless bugs
+            would sneak under my inexperienced radar. It was a formula for
+            poorly-written, untested code that kept me coming back for more.
+          </div>
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Tell me more</div>
+          </div>
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong
+              >Taking the first step away from ChatGPT was daunting.</strong
+            >
+            As I scrolled through the impressive resume projects of job-crushing
+            college-grads and freelance workaholics alike, I shook at the sheer
+            number of work-hours necessary to complete such tasks without
+            assistance. I frequently found myself questioning my ability without
+            an AI assistant backing my play, but deep down I knew if I wanted to
+            get any good at programming, I needed to take a step away from
+            prompting.
+          </div>
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Tell me more</div>
+          </div>
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong
+              >I started with a simple form in the sunlit, fourth-floor common
+              room of my building at BSU.</strong
+            >
+            My fiance and I wanted a website to announce our wedding and
+            register guests: this seemed like the perfect opportunity to learn
+            how to build a website from scratch, without ChatGPT. Contrary to
+            popular understanding of computer scientists, I need sunlight to
+            write code. I much preferred the bright, floor-to-ceiling-windowed
+            common room in the honors dorm building at BSU to my small,
+            dimly-lit dorm room and reserved roommate. That is where I built my
+            first website: a simple registration form for my wedding in June of
+            2023. The feeling of accomplishment was my own; it gave me a step
+            toward AI independence.
+          </div>
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Tell me more</div>
+          </div>
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong
+              >The more code I wrote on my own, the more I understood.</strong
+            >
+            Soon after finishing my wedding website, I received a job building a
+            website for a local company, then another job building internal
+            tooling for another company, then a. Learning one term led to
+            learning another, and soon I had a basic understanding of the
+            principles of programming on the web. For me, the project or tool
+            was less important than the ability to build an idea and reach a
+            goal without assistance. When I first learned to write code, the
+            language server or text editor tools were unhelpful. Likewise, AI
+            tools like Copilot or Tabnine that constantly try to guess what you
+            are thinking while you type were counterproductive and unhealthy for
+            my learning: it was too easy to get the answer and move on without
+            considering (on the off-chance it was correct).
+          </div>
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Tell me more</div>
+          </div>
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong>I can see now that I was not alone in my addiction.</strong>
+            In each of my middle-to-higher-level classes, many of my classmates
+            race to the comforting OpenAI website to ask for solutions to their
+            problems, or help building out a project as I once did. As more AI
+            tools promise to replace programmers, their appeal adds to the
+            difficulty of breaking free: why learn to code when an AI tool can
+            spit out the correct answer and save you time? I shudder every time
+            I remember the many long hours staring at error messages and fixing
+            bugs without a second robotic opinion, but those late-night coding
+            sessions fueled my learning. Even though my projects were often
+            unfinished and lost to the depths of my computer’s hard drive, their
+            invaluable lesson was never lost to me: do it yourself.
+          </div>
+
+          <div class="chat-msg user-msg-container">
+            <div class="user-msg">Tell me more</div>
+          </div>
+          <div class="chat-msg ai">
+            <img
+              class="ai-logo"
+              src="/public/assets/brain-solid.svg"
+              alt="ai-brain"
+            />
+            <strong
+              >By far, I write more code than any other medium (including text
+              messages),</strong
+            >
+            and while it is powerfully tempting to ask ChatGPT to write
+            everything for me, the side-effect of losing all ability to write is
+            too costly. I can write for hours at a time to build out an idea or
+            see a project through, but, as you have seen, I did not start that
+            way. Learning to write code has been the most influential,
+            empowering, and profitable experience of my life and career, and
+            continues to be as I write more. At the simplest level, it has given
+            me a greater respect for the systems our society has created, the
+            systems we use every day.
+          </div>
+        </div>
+        <div class="form-container">
+          <form id="story-form">
+            <textarea
+              name="full-name"
+              rows="2"
+              placeholder="Prompt the AI to continue..."
+            ></textarea>
+            <div class="form-ctrl">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+          <div class="credits-container">
+            <span>Created by: Isaac Denny</span>
+            <span>Thanks for visiting!</span>
+          </div>
+        </div>
       </div>
-    <div>
-	
-    <footer>
-      <div class="footer-container">
-        <p>Thanks for visiting!</p>
-      </div>
-    </footer>
+    </div>
     <script src="/public/index.js" type="text/javascript"></script>
   </body>
 </html>

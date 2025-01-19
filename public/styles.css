@@ -13,15 +13,15 @@
 }
 
 :root {
-  --primary: #ffffff;
-  --accent: #002333;
-  --accent-hover: #159a9c;
-  --field: #deefe7;
-  --field-dark: #b4bec9;
+  --primary: #1f1f1f;
+  --accent: white;
+  --accent-hover: #737373;
+  --field: #313131;
+  --field-dark: #313131;
   --error: #dc7568;
   --disabled: #bebebe;
   --shadow: #00000023;
-  --side-padding: 100px;
+  --side-padding: 30px;
   --side-padding-mobile: 10px;
   --box-shadow: 0px 5px 20px var(--shadow);
 
@@ -30,6 +30,7 @@
 
 body {
   margin: 0;
+  background: var(--primary);
 }
 
 .nav-container {
@@ -60,7 +61,7 @@ nav {
 }
 
 .nav-links a {
-  color: var(--field-dark);
+  color: var(--field);
   text-decoration: none;
   font-size: small;
 }
@@ -91,50 +92,36 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: var(--accent);
 }
 
 h3 {
-  color: var(--field-dark);
+  color: var(--accent);
   margin: 0;
 }
 
 p {
   font-size: medium;
+  color: var(--accent);
 }
 
 label {
   font-size: small;
-  color: var(--field-dark);
+  color: var(--accent);
 }
 
-input {
-  padding: 15px 15px;
+textarea {
   border: none;
   border-radius: 10px;
   background: var(--field);
   outline: none;
   z-index: 1;
+  color: white;
+  overflow: hidden;
 }
 
-textarea {
-  padding: 15px 15px;
-  border: none;
-  border-radius: 10px;
-  background: var(--field);
-  outline: none;
-}
-
-input:disabled {
+textarea:disabled {
   background: var(--disabled);
-}
-
-select {
-  padding: 15px 15px;
-  border: none;
-  border-radius: 10px;
-  background: var(--field);
-  outline: none;
 }
 
 button {
@@ -142,7 +129,7 @@ button {
   border-radius: 10px;
   background: var(--accent);
   padding: 10px 40px;
-  color: white;
+  color: var(--primary);
   transition: all 0.3s;
   font-weight: bold;
   box-shadow: var(--box-shadow);
@@ -152,6 +139,7 @@ button {
 button:hover {
   background: var(--accent-hover);
   transition: all 0.3s;
+  color: white;
 }
 
 .content {
@@ -159,58 +147,112 @@ button:hover {
   overflow: hidden;
 }
 
-.title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.story-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem 0;
-  flex-direction: column;
-}
-
 .home-page {
-  display: flex;
-  flex-direction: column;
-  background: var(--primary);
-  gap: 1rem;
-  padding: 2rem var(--side-padding);
-  height: -webkit-fill-available;
+  padding: 2rem 0;
+}
+
+.page-heading {
+  text-align: center;
 }
 
 .form-container {
+  position: relative;
   padding: 1rem;
-  box-shadow: var(--box-shadow);
+  width: 700px;
 }
 
-.form-field {
+.form-container form {
   display: flex;
   flex-direction: column;
-  transition: all 0.5s ease-in-out;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: var(--field);
+  gap: 1rem;
+}
+
+.form-ctrl {
+  display: flex;
+  justify-content: right;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.chat-messages .chat-break {
+  margin: 2rem 0;
+}
+
+.ai-logo {
+  position: absolute;
+  left: -2rem;
+  top: 0.8rem;
+  width: 20px;
+  filter: invert(97%) sepia(2%) saturate(659%) hue-rotate(156deg)
+    brightness(118%) contrast(100%);
+}
+
+.chat-msg {
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   max-height: 0px;
+  color: var(--accent);
+  padding: 0;
+  text-wrap: wrap;
+  transition: all 0.5s ease-in-out;
+  display: inline;
 }
 
-.form-field.visible {
+.chat-msg.ai.visible {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.chat-msg.user-msg-container {
+  display: flex;
+  align-items: end;
+}
+
+.user-msg {
+  text-wrap-mode: nowrap;
+  max-width: min-content;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--field);
+}
+
+.chat-msg.visible {
   opacity: 1;
   max-height: 500px;
+  padding: 0.5rem;
   transition: all 0.5s ease-in-out;
+  line-height: 25px;
 }
 
-.footer-container {
+.credits-container {
+  width: -webkit-fill-available;
   display: flex;
   justify-content: space-between;
+  font-size: small;
+  color: white;
+  text-wrap-mode: nowrap;
+  padding: 1rem var(--side-padding);
 }
 
 @media screen and (max-width: 550px) {
-  .footer-container {
+  .credits-container {
     padding: 10px 10px;
   }
 
@@ -260,5 +302,9 @@ button:hover {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+  }
+
+  .form-container {
+    width: -webkit-fill-available;
   }
 }

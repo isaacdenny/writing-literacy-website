@@ -2,37 +2,22 @@ var currentField = 0;
 
 document.getElementById("story-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("submitted");
+  nextChat(); // show submitted chat
+  setTimeout(() => {
+    // show ai chat in a second
+    // may want to do a little "thinking..." thing
+    nextChat();
+  }, 1000);
 });
 
-const fields = Array.from(document.getElementsByClassName("form-field"));
-console.log(fields);
-
-fields.map((inp) => {
-  const width = inp.attributes["width"];
-  if (!width) return;
-  inp.style.width = width.value;
-});
+const msgs = Array.from(document.getElementsByClassName("chat-msg"));
+console.log(msgs);
 
 /**
  * shows the field at fields[n] with animation
  */
-function showField(n) {
-  if (n < 0 || n > fields.length) return;
-  fields[n].className = "form-field visible";
-}
-/**
- * hides the field at fields[n] with animation
- */
-function hideField(n) {
-  if (n < 0 || n > fields.length) return;
-  fields[n].className = "form-field";
-}
-
-document.getElementById("next-btn")?.addEventListener("click", function (e) {
-  e.preventDefault();
+function nextChat() {
+  if (currentField >= msgs.length) return;
+  msgs[currentField].classList.add("visible");
   currentField++;
-  showField(currentField);
-});
-
-showField(currentField);
+}
